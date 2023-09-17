@@ -65,3 +65,27 @@ int loop(va_list ap, char *p)
 	}
 	return (count);
 }
+
+/**
+ * put_int - Prints an integer to the standard output
+ * @x: The integer to be printed
+ *
+ * Return: The number of characters printed
+ */
+int put_int(int x)
+{
+	int count = 0;
+
+	if (x < 0)
+	{
+		count += _putchar('-');
+		x = -x;
+	}
+	if (x != 0)
+	{
+		count += put_int((int)(x / 10));
+		_putchar(48 + (x % 10));
+		count++;
+
+		return (count);
+}
