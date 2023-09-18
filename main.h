@@ -5,6 +5,7 @@
 #include <stddef.h>
 #include <unistd.h>
 #include <limits.h>
+#include <stdio.h>
 
 typedef struct print_t
 {
