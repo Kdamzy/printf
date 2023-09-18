@@ -11,7 +11,7 @@ int main(void)
 	len = _printf("Character: [%c]\n", 'A');
 	_printf("Length: [%d]\n", len);
 
-	len = _printf("Integer: [%d]\n,", 12345);
+	len = _printf("Integer: [%d]\n", 12345);
 	_printf("Length: [%d]\n", len);
 
 	len = _printf("Hexadecimal: [%x]\n", 255);

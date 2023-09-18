@@ -65,5 +65,11 @@ int loop(va_list ap, char *p)
 		}
 		i++;
 	}
+	if (cases[i].s == '\0')
+	{
+		_putchar('%');
+		_putchar(*(p + 1));
+		count += 2;
+	}
 	return (count);
 }
