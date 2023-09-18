@@ -17,7 +17,6 @@ int main(void)
 	len = _printf("Hexadecimal: [%x]\n", 255);
 	_printf("Length: [%d]\n", len);
 
-	len = _printf("Percent: [%%]\n");
 	_printf("Length: [%d]\n", len);
 
 	return (0);
