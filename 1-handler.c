@@ -44,9 +44,10 @@ int print_string(va_list ap)
 	if (str == NULL)
 		str = "(null)";
 
-	while (*(str + count) != '\0')
+	while (*str)
 	{
-		_putchar(*(str + count));
+		_putchar(*str);
+		str++;
 		count++;
 	}
 
@@ -99,4 +100,17 @@ int put_int(int x)
 		_putchar('0' + (x % 10));
 	}
 	return (count);
+}
+
+/**
+ * print_percent - prints a percent character (%).
+ * @ap: A variable argument list (not used).
+ *
+ * Return: The number of characters printed (always 1).
+ */
+int print_percent(va_list ap)
+{
+	(void)ap;
+	_putchar('%');
+	return (1);
 }

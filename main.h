@@ -19,5 +19,6 @@ int put_int(int x);
 int print_string(va_list ap);
 int print_char(va_list ap);
 int print_digit(va_list ap);
+int print_percent(va_list ap);
 
 #endif
