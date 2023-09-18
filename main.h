@@ -4,6 +4,7 @@
 #include <stdarg.h>
 #include <stddef.h>
 #include <unistd.h>
+#include <limits.h>
 
 typedef struct print_t
 {
@@ -20,5 +21,10 @@ int print_string(va_list ap);
 int print_char(va_list ap);
 int print_digit(va_list ap);
 int print_percent(va_list ap);
+int print_hex_upper(va_list ap);
+int print_hex(va_list ap);
+int print_octal(va_list ap);
+int print_unsign(va_list ap);
+int print_binary(va_list ap);
 
 #endif
