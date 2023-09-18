@@ -54,7 +54,7 @@ int loop(va_list ap, char *p)
 	{
 		_putchar('%');
 		count++;
-		return (1);
+		return (2);
 	}
 	while (cases[i].s != '\0')
 	{
