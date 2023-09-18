@@ -152,8 +152,9 @@ int write_num(int ind, char buffer[],
 int write_unsgnd(int is_negative, int ind,
 	char buffer[],
 	int flags, int width, int precision, int size)
-
-	int length = BUFF_SIZE - ind - 1, a = 0;
+{
+	int length = BUFF_SIZE - ind - 1;
+       	int a = 0;
 	char padd = ' ';
 
 	UNUSED(is_negative);
