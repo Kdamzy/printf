@@ -1,11 +1,15 @@
 #include "main.h"
+
+
 /**
- *  _printf - function that produces
- *  output according to a given format
+ * _printf - function that produces
+ * output according to a given format
  * @format: format, which is a string character
  * Return: the number of printed characters,excluding
  * the null byte used to end output to sting
  */
+
+
 int _printf(const char *format, ...)
 {
 	va_list ap;
@@ -22,12 +26,13 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			sum = sum + loop(ap, p);
+			sum += loop(ap, p);
 			p++;
 		}
 		p++;
-		return (sum);
 	}
+	va_end(ap);
+	return (sum);
 }
 
 /**
@@ -37,6 +42,8 @@ int _printf(const char *format, ...)
  *
  * Return: the number of characters printed
  */
+
+
 int loop(va_list ap, char *p)
 {
 	print_t cases[] = {
@@ -72,6 +79,8 @@ int loop(va_list ap, char *p)
  *
  * Return: The number of characters printed
  */
+
+
 int put_int(int x)
 {
 	int count = 0;
@@ -83,9 +92,8 @@ int put_int(int x)
 	}
 	if (x != 0)
 	{
-		count += put_int((int)(x / 10));
-		_putchar(48 + (x % 10));
-		count++;
-
+		count += put_int(x / 10);
+		_putchar('0' + (x % 10));
+	}
 		return (count);
 }
