@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 
 	va_start(list, format);
 
-	for (a = 0; format && format[i] != '\0'; i++)
+	for (a = 0; format && format[a] != '\0'; a++)
 	{
 		if (format[a] != '%')
 		{
@@ -40,7 +40,7 @@ int _printf(const char *format, ...)
 			width = get_width(format, &a, list);
 			precision = get_precision(format, &a, list);
 			size = get_size(format, &a);
-			++i;
+			++a;
 			printed = handle_print(format, &a, list, buffer,
 				flags, width, precision, size);
 			if (printed == -1)
