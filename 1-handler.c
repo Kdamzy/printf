@@ -1,4 +1,6 @@
 #include "main.h"
+#include <unistd.h>
+#include <stdarg.h>
 
 /**
  * print_char - prints an argument based on type
@@ -68,6 +70,33 @@ int print_string(va_list ap)
 int print_digit(va_list ap)
 {
 	int num = va_arg(ap, int);
+	int count = 0;
 
-	return (put_int(num));
+	if (num < 0)
+	{
+		_putchar('-');
+		count++;
+		num = -num;
+	}
+
+	count += put_int(num);
+	return (count);
+}
+
+/**
+ * put_int - Prints an integer to the standard output
+ * @x: The integer to be printed
+ *
+ * Return: The number of characters printed
+ */
+int put_int(int x)
+{
+	int count = 0;
+
+	if (x != 0)
+	{
+		count += put_int(x / 10);
+		_putchar('0' + (x % 10));
+	}
+	return (count);
 }
