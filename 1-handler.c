@@ -17,6 +17,7 @@
 int print_char(va_list ap)
 {
 	int character = va_arg(ap, int);
+
 	return (_putchar(character));
 }
 
@@ -37,6 +38,9 @@ int print_string(va_list ap)
 {
 	char *str = va_arg(ap, char *);
 	int count = 0;
+
+	if (str == NULL)
+		str = "(null)";
 
 	while (*(str + count) != '\0')
 	{
@@ -64,5 +68,6 @@ int print_string(va_list ap)
 int print_digit(va_list ap)
 {
 	int num = va_arg(ap, int);
+
 	return (put_int(num));
 }
