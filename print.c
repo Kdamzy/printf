@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 /**
  * _printf - function that produces
  * output according to a given format
@@ -8,8 +7,6 @@
  * Return: the number of printed characters,excluding
  * the null byte used to end output to sting
  */
-
-
 int _printf(const char *format, ...)
 {
 	va_list ap;
@@ -42,8 +39,6 @@ int _printf(const char *format, ...)
  *
  * Return: the number of characters printed
  */
-
-
 int loop(va_list ap, char *p)
 {
 	print_t cases[] = {
@@ -96,4 +91,4 @@ int put_int(int x)
 		_putchar('0' + (x % 10));
 	}
 		return (count);
-}
+ }

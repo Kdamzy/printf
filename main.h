@@ -3,6 +3,7 @@
 
 #include <stdarg.h>
 #include <stddef.h>
+#include <unistd.h>
 
 typedef struct print_t
 {
