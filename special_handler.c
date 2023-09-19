@@ -154,7 +154,7 @@ int write_unsgnd(int is_negative, int ind,
 	int flags, int width, int precision, int size)
 {
 	int length = BUFF_SIZE - ind - 1;
-       	int a = 0;
+	int a = 0;
 	char padd = ' ';
 
 	UNUSED(is_negative);
